@@ -36,7 +36,7 @@ float HTU21DF::readTemperature(void) {
   do
   {
     tryCounter--;
-    if (tryCounter == 0) break; //return HTU21D_ERROR;                      //error handler
+    if (tryCounter == 0) return HTU21D_ERROR;                      //error handler
     
     delay(100); // add delay between request and actual read!
     
@@ -77,7 +77,7 @@ float HTU21DF::readHumidity(void) {
   do
   {
     tryCounter--;
-    if (tryCounter == 0) break; //return HTU21D_ERROR;                      //error handler
+    if (tryCounter == 0) return HTU21D_ERROR;                      //error handler
     
     delay(100); // add delay between request and actual read!
     
